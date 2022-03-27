@@ -1,14 +1,14 @@
 const printStringOrNumber = (arg) => {
+  if (isNaN(arg)) {
+    return undefined;
+  }
+
   if (typeof arg === 'string') {
     return 'string';
   }
 
   if (typeof arg === 'number') {
     return 'number';
-  }
-
-  if (isNaN(arg)) {
-    return undefined;
   }
 
   return undefined;
