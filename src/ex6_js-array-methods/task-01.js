@@ -1,6 +1,7 @@
-/* eslint-disable no-param-reassign */
-const mySlice = (array, begin = 0, end = array.length) => {
+const mySlice = (array, sliceBegin = 0, sliceEnd = array.length) => {
   const result = [];
+  let begin = sliceBegin;
+  let end = sliceEnd;
 
   if ((begin < 0) && (Math.abs(begin) > array.length)) {
     begin = 0;
