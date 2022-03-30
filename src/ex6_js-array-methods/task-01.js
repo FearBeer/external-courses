@@ -30,6 +30,7 @@ const mySlice = (array, sliceBegin = 0, sliceEnd = array.length) => {
       result.push(array[i]);
     }
   }
+
   return result;
 };
 
