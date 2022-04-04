@@ -1,0 +1,26 @@
+dt {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+div p {
+    font-family: 'Send Flowers', cursive;
+    margin: 0;
+}
+
+.pre {
+    width: 300px;
+    background: url('https://walldeco.ua/img/gallery/7/thumbs/thumb_l_22422.jpg') center/cover no-repeat;
+    color: white;
+}
+
+.pre pre {
+    width: 100%;
+    margin: 0;
+    padding-top: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+img {
+    width: 50vw;
+}
