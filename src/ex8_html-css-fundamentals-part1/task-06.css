@@ -12,7 +12,6 @@ div {
 
 button {
     position: relative;
-    /* Created with https://www.css-gradient.com */
     background: linear-gradient(to top, rgb(146, 146, 146), rgb(241, 241, 241));
     font-size: 30px;
     font-weight: bold;

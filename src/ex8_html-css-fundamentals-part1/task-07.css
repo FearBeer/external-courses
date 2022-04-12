@@ -4,27 +4,33 @@ div {
     background-color: rgb(0, 201, 134);
 }
 
-.three_div {
+.wrap {
     margin: auto;
     position: relative;
     margin-bottom: 60px;
+    background-color: transparent;
 }
 
-.three_div div:first-child {
+.one {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.two {
     position: absolute;
     top: 10px;
     left: 10px;
-    /* opacity: 0.8; */
-    z-index: -2;
+    z-index: 2;
     background-color: rgb(50, 255, 134);
 }
 
-.three_div div:last-child {
+.three {
     position: absolute;
     top: 20px;
     left: 20px;
-    /* opacity: 0.6; */
-    z-index: -4;
+    z-index: 1;
 }
 
 .box_shadow {
@@ -57,4 +63,32 @@ div {
     background: rgb(150, 255, 134);
     transform: translate(20px, 20px);
     z-index: -2;
+}
+
+/* не нашёл как с афте и бифо и без отрицательного z-index сделать, потому добавил ещё вариант */
+.a {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgb(30, 85, 22);
+    transform: translate(10px, 10px);
+    z-index: 3;
+}
+
+.b {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgb(48, 139, 34);
+    transform: translate(20px, 20px);
+    z-index: 2;
+}
+
+.c {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgb(150, 255, 134);
+    transform: translate(30px, 30px);
+    z-index: 1;
 }
