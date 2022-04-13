@@ -4,16 +4,17 @@ body {
 
 main {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 header {
+  width: 100%;
   background: lightblue;
 }
 
 section {
   background: lightgreen;
-  width: 75%;
+  width: 73%;
   align-self: flex-start;
 }
 
@@ -24,10 +25,11 @@ article {
 
 aside {
   background: pink;
-  width: 25%;
-  align-self: flex-end;
+  width: 23%;
+  min-height: 100%;
+
 }
 
 header, article, section, .module {
-  padding: 1rem;
+  padding: 2%;
 }

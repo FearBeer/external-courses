@@ -4,18 +4,19 @@ body {
 
 main {
   display: grid;
-  grid-template-rows: 0.3fr 1fr 0.5fr;
+  grid-template-areas:
+    "header header header header"
+    "section section section aside";
 }
 
 header {
   background: lightblue;
+  grid-area: header;
 }
 
 section {
+  grid-area: section;
   background: lightgreen;
-  width: 75%;
-  display: grid;
-  align-items: center;
 }
 
 article {
@@ -25,8 +26,8 @@ article {
 }
 
 aside {
+  grid-area: aside;
   background: pink;
-  width: 25%;
   justify-self: end;
 }
 
