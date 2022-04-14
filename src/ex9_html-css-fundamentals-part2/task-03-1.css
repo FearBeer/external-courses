@@ -1,0 +1,16 @@
+#table {
+    border: 1px solid white;
+}
+
+.row:nth-child(odd) {
+    background: rgba(191, 195, 253, 0.6);
+}
+
+
+.row:nth-child(even) {
+    background: rgba(187, 187, 187, 0.6);
+}
+
+.row:hover:not(:first-child) {
+    background: rgba(187, 187, 187, 1);
+}
