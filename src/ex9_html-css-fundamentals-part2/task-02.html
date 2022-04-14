@@ -8,22 +8,21 @@
   </head>
   <body>
     <form action="http://httpbin.org/get">
-      <!-- <form action="http://httpbin.org/post"> method not allowed -->
       <fieldset>
         <legend>Personal data</legend>
         <p>
           <label for="surname">Surname</label>
-          <input type="text" name="surname" />
+          <input type="text" id="surname" />
         </p>
 
         <p>
           <label for="firstname">First name</label>
-          <input type="text" name="firstname" />
+          <input type="text" id="firstname" />
         </p>
 
         <p>
           <label for="middlename">Middle name</label>
-          <input type="text" name="middlename" />
+          <input type="text" id="middlename" />
         </p>
 
         <p>
@@ -36,11 +35,11 @@
 
         <p>
           <label for="age">Age</label>
-          <input type="number" name="age" min="18" max="101" />
+          <input type="number" id="age" min="18" max="101" />
         </p>
 
         <p>
-          <label for="country">Country of Residence</label>
+          <label>Country of Residence</label>
           <select>
             <option></option>
             <option value="Russia">Russia</option>
@@ -49,15 +48,15 @@
 
         <p>
           <span>City</span>
-          <input type="checkbox" name="ryazan" />
+          <input type="checkbox" id="ryazan" />
           <label for="ryazan">Ryazan</label>
-          <input type="checkbox" name="moscow" />
+          <input type="checkbox" id="moscow" />
           <label for="moscow">Moscow</label>
         </p>
 
         <p>
           <label for="file">Photography</label>
-          <input type="file" name="file" />
+          <input type="file" id="file" />
         </p>
 
         <hr />
@@ -99,7 +98,7 @@
 
         <p>
           <label for="site">Site</label>
-          <input type="text" name="site" />
+          <input type="text" id="site" />
         </p>
 
         <p>
@@ -109,13 +108,13 @@
 
         <p>
           <label for="phone">Phone</label>
-          <input type="text" name="phone" />
+          <input type="text" id="phone" />
         </p>
       </fieldset>
 
       <p>
         <label for="password">Password</label>
-        <input type="text" name="password" required />
+        <input type="text" id="password" required />
       </p>
 
       <p>
