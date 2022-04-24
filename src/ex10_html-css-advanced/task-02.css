@@ -31,9 +31,9 @@
     transition: .3s;
 }
 
-#enter:focus~.label,
+/* #enter:focus~.label,
 #enter:not(:focus):valid~.label {
     top: -15px;
     font-size: 15px;
     color: blue;
-}
+} */

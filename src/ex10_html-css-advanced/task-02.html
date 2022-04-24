@@ -10,7 +10,12 @@
   <body>
     <form class="wrap">
       <input type="text" id="enter" required />
-      <label class="label">enter what you want</label>
+      <label class="label" id="label">enter what you want</label>
     </form>
+    <script>
+      enter.addEventListener("keydown", () => {
+        label.style.cssText = "top: -15px; font-size: 15px; color: blue;";
+      });
+    </script>
   </body>
 </html>
