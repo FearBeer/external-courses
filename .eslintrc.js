@@ -57,6 +57,7 @@ module.exports = {
     'no-console': 0,
     'no-param-reassign': [2, { props: true }],
     'no-process-env': 0,
+    'no-plusplus': 0,
     'no-proto': 0,
     'no-redeclare': 2,
     'no-return-assign': 2,
