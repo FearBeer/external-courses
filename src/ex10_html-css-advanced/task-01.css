@@ -1,0 +1,141 @@
+.wrap {
+    margin: 100px auto;
+    width: 50%;
+    height: 200px;
+}
+
+.loader {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 30px auto;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    border-bottom-color: #0c3152;
+    animation: preload 2s linear infinite;
+}
+
+.loader:before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    border-bottom-color: #4f9ee2;
+    animation: preload2 1s linear infinite;
+}
+
+@keyframes preload {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes preload2 {
+    0% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.top {
+    width: 100%;
+    height: 20px;
+    background-color: black;
+    margin: 0 auto;
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    background-color: #4f9ee2;
+    border-radius: 50%;
+    animation: jump 3s linear infinite;
+}
+
+.bottom {
+    position: relative;
+    top: 160px;
+    width: 100%;
+    height: 20px;
+    background-color: black;
+    margin: 0 auto;
+}
+
+@keyframes jump {
+    0% {
+        transform: translate(-50px, -5px);
+    }
+
+    20% {
+        transform: translate(100px, 165px);
+    }
+
+    40% {
+        transform: translate(200px, -5px);
+    }
+
+    60% {
+        transform: translate(300px, 165px);
+    }
+
+    80% {
+        transform: translate(400px, -5px);
+    }
+
+    100% {
+        transform: translate(550px, 165px);
+    }
+}
+
+.infinity {
+
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    background: linear-gradient(to top, rgb(255, 255, 255), rgb(0, 0, 0));
+    animation: crazy 3s linear infinite;
+}
+
+@keyframes crazy {
+    0% {
+        border-radius: 50%;
+        background-position: 0 0;
+    }
+
+    20% {
+        border-radius: 0;
+        background-position: 20px 20px;
+
+    }
+
+    40% {
+        background-position: 20px;
+        background-position: 40px 40px;
+    }
+
+    60% {
+        transform: scale(1) skew(45deg);
+        background-position: 60px 60px;
+    }
+
+    80% {
+        transform: rotate(10deg);
+        background-position: 80px 80px;
+    }
+
+    100% {
+        border-radius: 50%;
+        background-position: 100px 100px;
+    }
+}
