@@ -34,22 +34,33 @@ main {
     align-items: center;
     gap: 10px;
     list-style-type: none;
-    color: #69738c;
 }
 
 .navbar_item {
     padding: 5px;
+    height: 100%;
+    border: none;
+    background-color: #2f364a;
+}
+
+.navbar_item:last-child {
+    padding: 0;
+    border-top-right-radius: 5px;
 }
 
 .profile {
     border-top-right-radius: 5px;
+    padding: 5px;
     height: 100%;
     display: flex;
     gap: 10px;
     align-items: center;
     justify-content: space-around;
-    color: white;
     background-color: #15a4fa;
+}
+
+.profile p {
+    color: white;
 }
 
 .photo {
@@ -86,6 +97,12 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    border: none;
+}
+
+.header a, .footer a {
+    text-decoration: none;
+    color: #69738c;
 }
 
 .faq {

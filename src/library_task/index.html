@@ -9,32 +9,42 @@
   </head>
   <body>
     <header class="header">
-      <ul class="navbar">
-        <li class="navbar_item">Help center</li>
+      <div class="navbar">
+        <button class="navbar_item">
+          <a href="#">Help center</a>
+        </button>
         <div class="dot"></div>
-        <li class="navbar_item">Our Support</li>
-        <li class="navbar_item profile">
-          <div class="photo">
-            <img src="./assets/image/ava.svg" alt="profile" />
-          </div>
-          <p>John Doe</p>
-          <div class="online">
-            <img src="./assets/image/downarrowinacircle.svg" alt="online" />
-          </div>
-        </li>
-      </ul>
+        <button class="navbar_item">
+          <a href="#">Our Support</a>
+        </button>
+        <button class="navbar_item">
+          <a class="profile" href="">
+            <div class="photo">
+              <img src="./assets/image/ava.svg" alt="profile" />
+            </div>
+            <p>John Doe</p>
+            <div class="online">
+              <img src="./assets/image/downarrowinacircle.svg" alt="online" />
+            </div>
+          </a>
+        </button>
+      </div>
     </header>
     <main>
       <aside></aside>
       <section></section>
     </main>
     <footer class="footer">
-      <div class="faq">
-        <img src="./assets/image/question.svg" alt="faq" />
-      </div>
-      <div class="options">
-        <img src="./assets/image/settings.svg" alt="settings" />
-      </div>
+      <button class="faq">
+        <a href="#">
+          <img src="./assets/image/question.svg" alt="faq" />
+        </a>
+      </button>
+      <button class="options">
+        <a href="#">
+          <img src="./assets/image/settings.svg" alt="settings" />
+        </a>
+      </button>
     </footer>
   </body>
 </html>
