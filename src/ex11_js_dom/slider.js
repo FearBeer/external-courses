@@ -22,18 +22,22 @@ const getImages = async () => {
   back.addEventListener('click', () => {
     images[count].classList.remove('active');
     count--;
+
     if (count === -1) {
       count = images.length - 1;
     }
+
     images[count].classList.add('active');
   });
 
   forward.addEventListener('click', () => {
     images[count].classList.remove('active');
     count++;
+
     if (count === images.length) {
       count = 0;
     }
+
     images[count].classList.add('active');
   });
 };
