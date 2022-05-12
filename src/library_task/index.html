@@ -31,9 +31,22 @@
       </div>
     </header>
     <main class="main">
+      <div class="modal_add_book">
+        <div class="close">&#x2718;</div>
+        <form id="add_book">
+          <input type="text" placeholder="Введите автора книги" />
+          <input type="text" placeholder="Введите название книги" />
+          <div>
+            <label for="file">Загрузите картиночку книжечки</label>
+            <input type="file" id="file" />
+          </div>
+        </form>
+      </div>
       <aside class="aside">
         <div class="aside_button">
-          <button><span class="plus">+</span> <span>ADD A BOOK</span></button>
+          <button class="add">
+            <span class="plus">+</span> <span>ADD A BOOK</span>
+          </button>
         </div>
 
         <div class="divider"></div>
@@ -145,13 +158,13 @@
 
           <div class="section_search">
             <ul class="section_menu">
-              <li class="section_menu_item">
+              <li class="section_menu_item all_books">
                 <a href="#">All books</a>
               </li>
               <li class="section_menu_item">
                 <a href="#">most recent</a>
               </li>
-              <li class="section_menu_item">
+              <li class="section_menu_item most_popular">
                 <a href="#">most popular</a>
               </li>
               <li class="section_menu_item">
@@ -171,17 +184,64 @@
             <img src="./assets/image/bookscover.jpg" alt="" />
             <div class="book_title">TITTLE</div>
             <div class="book_author">AUTHOR</div>
-            <div class="book_rating">
-              <input type="radio" id="star-1" name="rating" value="1" />
-              <label for="star-1"></label>
-              <input type="radio" id="star-2" name="rating" value="2" />
-              <label for="star-2"></label>
-              <input type="radio" id="star-3" name="rating" value="3" />
-              <label for="star-3"></label>
-              <input type="radio" id="star-4" name="rating" value="4" />
-              <label for="star-4"></label>
-              <input type="radio" id="star-5" name="rating" value="5" />
-              <label for="star-5"></label>
+            <div class="book_rating" data-all="0">
+              <div class="book_rating_item" data-value="5">★</div>
+              <div class="book_rating_item" data-value="4">★</div>
+              <div class="book_rating_item" data-value="3">★</div>
+              <div class="book_rating_item" data-value="2">★</div>
+              <div class="book_rating_item" data-value="1">★</div>
+            </div>
+          </div>
+
+          <div class="book">
+            <img src="./assets/image/bookscover.jpg" alt="" />
+            <div class="book_title">TITTLE 1</div>
+            <div class="book_author">AUTHOR 1</div>
+            <div class="book_rating" data-all="0">
+              <div class="book_rating_item" data-value="5">★</div>
+              <div class="book_rating_item" data-value="4">★</div>
+              <div class="book_rating_item" data-value="3">★</div>
+              <div class="book_rating_item" data-value="2">★</div>
+              <div class="book_rating_item" data-value="1">★</div>
+            </div>
+          </div>
+
+          <div class="book">
+            <img src="./assets/image/bookscover.jpg" alt="" />
+            <div class="book_title">TITTLE 2</div>
+            <div class="book_author">AUTHOR 2</div>
+            <div class="book_rating" data-all="0">
+              <div class="book_rating_item" data-value="5">★</div>
+              <div class="book_rating_item" data-value="4">★</div>
+              <div class="book_rating_item" data-value="3">★</div>
+              <div class="book_rating_item" data-value="2">★</div>
+              <div class="book_rating_item" data-value="1">★</div>
+            </div>
+          </div>
+
+          <div class="book">
+            <img src="./assets/image/bookscover.jpg" alt="" />
+            <div class="book_title">TITTLE 3</div>
+            <div class="book_author">AUTHOR 3</div>
+            <div class="book_rating" data-all="0">
+              <div class="book_rating_item" data-value="5">★</div>
+              <div class="book_rating_item" data-value="4">★</div>
+              <div class="book_rating_item" data-value="3">★</div>
+              <div class="book_rating_item" data-value="2">★</div>
+              <div class="book_rating_item" data-value="1">★</div>
+            </div>
+          </div>
+
+          <div class="book">
+            <img src="./assets/image/bookscover.jpg" alt="" />
+            <div class="book_title">TITTLE 2</div>
+            <div class="book_author">AUTHOR 2</div>
+            <div class="book_rating" data-all="0">
+              <div class="book_rating_item" data-value="5">★</div>
+              <div class="book_rating_item" data-value="4">★</div>
+              <div class="book_rating_item" data-value="3">★</div>
+              <div class="book_rating_item" data-value="2">★</div>
+              <div class="book_rating_item" data-value="1">★</div>
             </div>
           </div>
 
@@ -189,17 +249,12 @@
             <img src="./assets/image/bookscover.jpg" alt="" />
             <div class="book_title">TITTLE</div>
             <div class="book_author">AUTHOR</div>
-            <div class="book_rating">
-              <input type="radio" id="star-1" name="rating 1" value="1" />
-              <label for="star-1"></label>
-              <input type="radio" id="star-2" name="rating 1" value="2" />
-              <label for="star-2"></label>
-              <input type="radio" id="star-3" name="rating 1" value="3" />
-              <label for="star-3"></label>
-              <input type="radio" id="star-4" name="rating 1" value="4" />
-              <label for="star-4"></label>
-              <input type="radio" id="star-5" name="rating 1" value="5" />
-              <label for="star-5"></label>
+            <div class="book_rating" data-all="0">
+              <div class="book_rating_item" data-value="5">★</div>
+              <div class="book_rating_item" data-value="4">★</div>
+              <div class="book_rating_item" data-value="3">★</div>
+              <div class="book_rating_item" data-value="2">★</div>
+              <div class="book_rating_item" data-value="1">★</div>
             </div>
           </div>
 
@@ -207,89 +262,12 @@
             <img src="./assets/image/bookscover.jpg" alt="" />
             <div class="book_title">TITTLE</div>
             <div class="book_author">AUTHOR</div>
-            <div class="book_rating">
-              <input type="radio" id="star-6" name="rating" value="1" />
-              <label for="star-6"></label>
-              <input type="radio" id="star-7" name="rating" value="2" />
-              <label for="star-7"></label>
-              <input type="radio" id="star-8" name="rating" value="3" />
-              <label for="star-8"></label>
-              <input type="radio" id="star-9" name="rating" value="4" />
-              <label for="star-9"></label>
-              <input type="radio" id="star-10" name="rating" value="5" />
-              <label for="star-10"></label>
-            </div>
-          </div>
-
-          <div class="book">
-            <img src="./assets/image/bookscover.jpg" alt="" />
-            <div class="book_title">TITTLE</div>
-            <div class="book_author">AUTHOR</div>
-            <div class="book_rating">
-              <input type="radio" id="star-1" name="rating" value="1" />
-              <label for="star-1"></label>
-              <input type="radio" id="star-2" name="rating" value="2" />
-              <label for="star-2"></label>
-              <input type="radio" id="star-3" name="rating" value="3" />
-              <label for="star-3"></label>
-              <input type="radio" id="star-4" name="rating" value="4" />
-              <label for="star-4"></label>
-              <input type="radio" id="star-5" name="rating" value="5" />
-              <label for="star-5"></label>
-            </div>
-          </div>
-
-          <div class="book">
-            <img src="./assets/image/bookscover.jpg" alt="" />
-            <div class="book_title">TITTLE</div>
-            <div class="book_author">AUTHOR</div>
-            <div class="book_rating">
-              <input type="radio" id="star-1" name="rating" value="1" />
-              <label for="star-1"></label>
-              <input type="radio" id="star-2" name="rating" value="2" />
-              <label for="star-2"></label>
-              <input type="radio" id="star-3" name="rating" value="3" />
-              <label for="star-3"></label>
-              <input type="radio" id="star-4" name="rating" value="4" />
-              <label for="star-4"></label>
-              <input type="radio" id="star-5" name="rating" value="5" />
-              <label for="star-5"></label>
-            </div>
-          </div>
-
-          <div class="book">
-            <img src="./assets/image/bookscover.jpg" alt="" />
-            <div class="book_title">TITTLE</div>
-            <div class="book_author">AUTHOR</div>
-            <div class="book_rating">
-              <input type="radio" id="star-1" name="rating" value="1" />
-              <label for="star-1"></label>
-              <input type="radio" id="star-2" name="rating" value="2" />
-              <label for="star-2"></label>
-              <input type="radio" id="star-3" name="rating" value="3" />
-              <label for="star-3"></label>
-              <input type="radio" id="star-4" name="rating" value="4" />
-              <label for="star-4"></label>
-              <input type="radio" id="star-5" name="rating" value="5" />
-              <label for="star-5"></label>
-            </div>
-          </div>
-
-          <div class="book">
-            <img src="./assets/image/bookscover.jpg" alt="" />
-            <div class="book_title">TITTLE</div>
-            <div class="book_author">AUTHOR</div>
-            <div class="book_rating">
-              <input type="radio" id="star-1" name="rating" value="1" />
-              <label for="star-1"></label>
-              <input type="radio" id="star-2" name="rating" value="2" />
-              <label for="star-2"></label>
-              <input type="radio" id="star-3" name="rating" value="3" />
-              <label for="star-3"></label>
-              <input type="radio" id="star-4" name="rating" value="4" />
-              <label for="star-4"></label>
-              <input type="radio" id="star-5" name="rating" value="5" />
-              <label for="star-5"></label>
+            <div class="book_rating" data-all="0">
+              <div class="book_rating_item" data-value="5">★</div>
+              <div class="book_rating_item" data-value="4">★</div>
+              <div class="book_rating_item" data-value="3">★</div>
+              <div class="book_rating_item" data-value="2">★</div>
+              <div class="book_rating_item" data-value="1">★</div>
             </div>
           </div>
         </div>
@@ -307,5 +285,7 @@
         </a>
       </button>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>

@@ -29,10 +29,6 @@ a {
     background-color: #2f364a;
 }
 
-main {
-    min-height: 100px;
-}
-
 .navbar {
     display: flex;
     align-items: center;
@@ -112,6 +108,7 @@ main {
 
 .main {
     width: 100%;
+    min-height: calc(100vh - 100px);
     display: flex;
 }
 
@@ -290,41 +287,32 @@ main {
 }
 
 .book_rating {
-    overflow: hidden;
-    width: 100%;
-    margin: 0 auto;
     display: flex;
+    gap: 5px;
     justify-content: flex-end;
     flex-direction: row-reverse;
 }
 
-.book_rating label {
-    padding: 0;
+.book_rating_item {
+    font-size: 20px;
     cursor: pointer;
-    color: lightgrey;
-    text-shadow: 1px 1px #bbb;
+    color: #5b6277;
+    transition: 0.3s;
 }
 
-.book_rating input:checked~label,
-.book_rating input:checked+label:hover,
-.book_rating input:checked+label:hover~label,
-.book_rating input:checked~label:hover,
-.book_rating input:checked~label:hover~label,
-.book_rating label:hover~input:checked~label {
-    color: gold;
+.book_rating_item:hover,
+.book_rating_item:hover~.book_rating_item {
+    color: rgb(59, 59, 57);
     text-shadow: 1px 1px #c60;
 }
 
-.book_rating input {
-    display: none;
-}
-
-.book_rating label:hover, .book_rating label:hover~label {
-    color: goldenrod;
-}
-
-.book_rating label:before {
-    content: '★';
+.book_rating[data-all='1'] .book_rating_item:nth-child(n + 5),
+.book_rating[data-all='2'] .book_rating_item:nth-child(n + 4),
+.book_rating[data-all='3'] .book_rating_item:nth-child(n + 3),
+.book_rating[data-all='4'] .book_rating_item:nth-child(n + 2),
+.book_rating[data-all='5'] .book_rating_item:nth-child(n + 1) {
+    color: gold;
+    text-shadow: 1px 1px #c60;
 }
 
 .footer {
@@ -364,4 +352,49 @@ main {
 .options {
     background-color: #15a4fa;
     border-bottom-right-radius: 5px;
+}
+
+.modal_add_book {
+    display: none;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #2f364aea;
+    z-index: 1000;
+}
+
+.close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    background-color: #141824;
+    color: #15a4fa;
+    font-size: 22px;
+    position: absolute;
+    top: 0;
+    left: calc(100% - 50px);
+}
+
+#add_book {
+    gap: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+#add_book input {
+    outline: none;
+    font-size: 24px;
+    height: 40px;
+}
+
+.none {
+    display: none;
 }
