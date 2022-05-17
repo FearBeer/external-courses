@@ -15,6 +15,10 @@
     font-family: 'Proxima Nova Regular';
 }
 
+a {
+    text-decoration: none;
+}
+
 .header {
     display: flex;
     justify-content: flex-end;
@@ -23,10 +27,6 @@
     width: 100%;
     height: 50px;
     background-color: #2f364a;
-}
-
-main {
-    min-height: 100px;
 }
 
 .navbar {
@@ -82,6 +82,239 @@ main {
     border-radius: 50%;
 }
 
+.pink {
+    background-color: pink;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.purple {
+    background-color: purple;
+}
+
+.miniwrap {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    width: 100%;
+    min-height: calc(100vh - 100px);
+    display: flex;
+}
+
+.aside ul {
+    list-style-type: none;
+    padding: 20px 0;
+}
+
+.aside ul li {
+    display: flex;
+    height: 30px;
+}
+
+.aside ul li a:hover {
+    background-color: #15a4fa;
+    color: white;
+}
+
+.aside ul li a:hover img {
+    filter: brightness(0) invert(1);
+}
+
+.aside ul li a {
+    padding: 0 5px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-transform: capitalize;
+}
+
+.divider {
+    width: 100%;
+    height: 4px;
+    background-color: #141824;
+}
+
+.aside {
+    width: 15%;
+    background-color: #1f2637;
+    color: #69738c;
+}
+
+.aside_button {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.aside_button button {
+    height: 40px;
+    width: 160px;
+    cursor: pointer;
+    color: white;
+    text-align: center;
+    background-color: #f2795a;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.plus {
+    font-size: 32px;
+}
+
+.section {
+    width: 85%;
+}
+
+.added-books {
+    padding: 20px 5px;
+}
+
+.added-books_item {
+    display: flex;
+    gap: 10px;
+    padding-bottom: 20px;
+}
+
+.added-books_item p span {
+    color: white;
+}
+
+.added-books_item p .time {
+    display: block;
+    padding-top: 10px;
+    color: #69738c;
+}
+
+.added-books_item img {
+    width: 20px;
+    height: 20px;
+}
+
+.section_header {
+    background-color: #eef1f7;
+}
+
+.section_search {
+    display: flex;
+    justify-content: space-between;
+}
+
+#search {
+    border: 1px solid #69738c;
+    border-radius: 20px;
+    padding: 2px 10px;
+    outline: none;
+    width: 100%;
+}
+
+.section_search label {
+    position: relative;
+    min-width: 30%;
+}
+
+.section_search label:after {
+    content: '\1F50D';
+    position: absolute;
+    right: 10px;
+    z-index: 1;
+}
+
+
+.section_menu {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    text-transform: capitalize;
+}
+
+.section_menu_item {
+    padding: 5px;
+}
+
+.section_menu_item:hover {
+    background-color: #97b3ce;
+    border-radius: 10px;
+}
+
+.section_menu_item:hover a {
+    color: white;
+}
+
+.section_header h1 {
+    padding: 20px;
+    color: #5b6277;
+}
+
+.section_search {
+    padding: 10px 20px;
+}
+
+.books {
+    padding: 30px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.book {
+    width: 200px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.book img {
+    width: 100%;
+    max-height: 80%;
+}
+
+.book_rating {
+    display: flex;
+    gap: 5px;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+}
+
+.book_rating_item {
+    font-size: 20px;
+    cursor: pointer;
+    color: #5b6277;
+    transition: 0.3s;
+}
+
+.book_rating_item:hover,
+.book_rating_item:hover~.book_rating_item {
+    color: rgb(59, 59, 57);
+    text-shadow: 1px 1px #c60;
+}
+
+.book_rating[data-all='1'] .book_rating_item:nth-child(n + 5),
+.book_rating[data-all='2'] .book_rating_item:nth-child(n + 4),
+.book_rating[data-all='3'] .book_rating_item:nth-child(n + 3),
+.book_rating[data-all='4'] .book_rating_item:nth-child(n + 2),
+.book_rating[data-all='5'] .book_rating_item:nth-child(n + 1) {
+    color: gold;
+    text-shadow: 1px 1px #c60;
+}
+
 .footer {
     background-color: #181e2c;
     height: 50px;
@@ -100,9 +333,16 @@ main {
     border: none;
 }
 
-.header a, .footer a {
-    text-decoration: none;
+.header a, .footer a, .main a {
     color: #69738c;
+}
+
+.footer a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .faq {
@@ -112,4 +352,49 @@ main {
 .options {
     background-color: #15a4fa;
     border-bottom-right-radius: 5px;
+}
+
+.modal_add_book {
+    display: none;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #2f364aea;
+    z-index: 1000;
+}
+
+.close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    background-color: #141824;
+    color: #15a4fa;
+    font-size: 22px;
+    position: absolute;
+    top: 0;
+    left: calc(100% - 50px);
+}
+
+#add_book {
+    gap: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+#add_book input {
+    outline: none;
+    font-size: 24px;
+    height: 40px;
+}
+
+.none {
+    display: none;
 }
