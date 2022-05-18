@@ -30,9 +30,248 @@
         </button>
       </div>
     </header>
-    <main>
-      <aside></aside>
-      <section></section>
+    <main class="main">
+      <div class="modal_add_book">
+        <div class="close">&#x2718;</div>
+        <form id="add_book">
+          <input type="text" placeholder="Введите автора книги" />
+          <input type="text" placeholder="Введите название книги" />
+          <div>
+            <label for="file">Загрузите картиночку книжечки</label>
+            <input type="file" id="file" />
+          </div>
+        </form>
+      </div>
+      <aside class="aside">
+        <div class="aside_button">
+          <button class="add">
+            <span class="plus">+</span> <span>ADD A BOOK</span>
+          </button>
+        </div>
+
+        <div class="divider"></div>
+
+        <ul>
+          <li>
+            <a href="#">
+              <img src="./assets/image/book.svg" alt="book" />
+              <span>Now Reading</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./assets/image/book.svg" alt="book" />
+              <span>browse</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./assets/image/book.svg" alt="book" />
+              <span>buy books</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./assets/image/book.svg" alt="book" />
+              <span>Favorite books</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./assets/image/book.svg" alt="book" />
+              <span>Whishlist</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./assets/image/book.svg" alt="book" />
+              <span>History</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="divider"></div>
+
+        <ul>
+          <li>
+            <a href="#">
+              <div class="miniwrap">
+                <div class="dot pink"></div>
+              </div>
+              <span>Must read titles</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="miniwrap">
+                <div class="dot orange"></div>
+              </div>
+              <span>best of list</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="miniwrap">
+                <div class="dot blue"></div>
+              </div>
+              classic novels
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="miniwrap">
+                <div class="dot purple"></div>
+              </div>
+              Non fiction
+            </a>
+          </li>
+        </ul>
+
+        <div class="divider"></div>
+
+        <div class="added-books">
+          <div class="added-books_item">
+            <img src="./assets/image/question.svg" alt="" />
+            <p>
+              You added <span>Fight Club</span> by
+              <span>Chuck Palaniuk</span> to your <span>Must Read Titles</span>
+              <span class="time">24 minutes ago</span>
+            </p>
+          </div>
+
+          <div class="added-books_item">
+            <img src="./assets/image/question.svg" alt="" />
+            <p>
+              You added <span>Fight Club</span> by
+              <span>Chuck Palaniuk</span> to your <span>Must Read Titles</span>
+              <span class="time">24 minutes ago</span>
+            </p>
+          </div>
+        </div>
+      </aside>
+
+      <section class="section">
+        <div class="section_header">
+          <h1>Browse aviable book</h1>
+
+          <hr />
+
+          <div class="section_search">
+            <ul class="section_menu">
+              <li class="section_menu_item all_books">
+                <a href="#">All books</a>
+              </li>
+              <li class="section_menu_item">
+                <a href="#">most recent</a>
+              </li>
+              <li class="section_menu_item most_popular">
+                <a href="#">most popular</a>
+              </li>
+              <li class="section_menu_item">
+                <a href="#">free books</a>
+              </li>
+            </ul>
+            <label>
+              <input id="search" type="text" placeholder="Enter keywords" />
+            </label>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="books">
+          <div class="book">
+            <img src="./assets/image/bookscover.jpg" alt="" />
+            <div class="book_title">TITTLE</div>
+            <div class="book_author">AUTHOR</div>
+            <div class="book_rating" data-all="0">
+              <div class="book_rating_item" data-value="5">★</div>
+              <div class="book_rating_item" data-value="4">★</div>
+              <div class="book_rating_item" data-value="3">★</div>
+              <div class="book_rating_item" data-value="2">★</div>
+              <div class="book_rating_item" data-value="1">★</div>
+            </div>
+          </div>
+
+          <div class="book">
+            <img src="./assets/image/bookscover.jpg" alt="" />
+            <div class="book_title">TITTLE 1</div>
+            <div class="book_author">AUTHOR 1</div>
+            <div class="book_rating" data-all="0">
+              <div class="book_rating_item" data-value="5">★</div>
+              <div class="book_rating_item" data-value="4">★</div>
+              <div class="book_rating_item" data-value="3">★</div>
+              <div class="book_rating_item" data-value="2">★</div>
+              <div class="book_rating_item" data-value="1">★</div>
+            </div>
+          </div>
+
+          <div class="book">
+            <img src="./assets/image/bookscover.jpg" alt="" />
+            <div class="book_title">TITTLE 2</div>
+            <div class="book_author">AUTHOR 2</div>
+            <div class="book_rating" data-all="0">
+              <div class="book_rating_item" data-value="5">★</div>
+              <div class="book_rating_item" data-value="4">★</div>
+              <div class="book_rating_item" data-value="3">★</div>
+              <div class="book_rating_item" data-value="2">★</div>
+              <div class="book_rating_item" data-value="1">★</div>
+            </div>
+          </div>
+
+          <div class="book">
+            <img src="./assets/image/bookscover.jpg" alt="" />
+            <div class="book_title">TITTLE 3</div>
+            <div class="book_author">AUTHOR 3</div>
+            <div class="book_rating" data-all="0">
+              <div class="book_rating_item" data-value="5">★</div>
+              <div class="book_rating_item" data-value="4">★</div>
+              <div class="book_rating_item" data-value="3">★</div>
+              <div class="book_rating_item" data-value="2">★</div>
+              <div class="book_rating_item" data-value="1">★</div>
+            </div>
+          </div>
+
+          <div class="book">
+            <img src="./assets/image/bookscover.jpg" alt="" />
+            <div class="book_title">TITTLE 2</div>
+            <div class="book_author">AUTHOR 2</div>
+            <div class="book_rating" data-all="0">
+              <div class="book_rating_item" data-value="5">★</div>
+              <div class="book_rating_item" data-value="4">★</div>
+              <div class="book_rating_item" data-value="3">★</div>
+              <div class="book_rating_item" data-value="2">★</div>
+              <div class="book_rating_item" data-value="1">★</div>
+            </div>
+          </div>
+
+          <div class="book">
+            <img src="./assets/image/bookscover.jpg" alt="" />
+            <div class="book_title">TITTLE</div>
+            <div class="book_author">AUTHOR</div>
+            <div class="book_rating" data-all="0">
+              <div class="book_rating_item" data-value="5">★</div>
+              <div class="book_rating_item" data-value="4">★</div>
+              <div class="book_rating_item" data-value="3">★</div>
+              <div class="book_rating_item" data-value="2">★</div>
+              <div class="book_rating_item" data-value="1">★</div>
+            </div>
+          </div>
+
+          <div class="book">
+            <img src="./assets/image/bookscover.jpg" alt="" />
+            <div class="book_title">TITTLE</div>
+            <div class="book_author">AUTHOR</div>
+            <div class="book_rating" data-all="0">
+              <div class="book_rating_item" data-value="5">★</div>
+              <div class="book_rating_item" data-value="4">★</div>
+              <div class="book_rating_item" data-value="3">★</div>
+              <div class="book_rating_item" data-value="2">★</div>
+              <div class="book_rating_item" data-value="1">★</div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="footer">
       <button class="faq">
@@ -46,5 +285,7 @@
         </a>
       </button>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
