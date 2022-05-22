@@ -1,92 +1,67 @@
-class VacuumCleaner {
-    power = 500;
+/* eslint-disable func-names */
+/* eslint-disable no-unused-vars */
+function VacuumCleaner(power, isOn, cleaningMode) {
+  this.power = power;
+  this.isOn = isOn;
+  this.cleaningMode = cleaningMode;
 
-    constructor(power, isOn, cleaningMode) {
-      this.power = power;
-      this.isOn = isOn;
-      this.cleaningMode = cleaningMode;
-    }
+  this.setOn = function () {
+    this.isOn = true;
+    return this;
+  };
 
-    setOn() {
-      this.isOn = true;
-      return this;
-    }
+  this.setOf = function () {
+    this.isOn = false;
+    return this;
+  };
 
-    setOf() {
-      this.isOn = false;
-      return this;
-    }
+  this.changeCleaningMode = function (mode = 'dry') {
+    this.cleaningMode = mode;
+    return this;
+  };
 
-    changeCleaningMode(mode = 'dry') {
-      this.cleaningMode = mode;
-      return this;
-    }
-
-    getInfo() {
-      console.log(`Мощность: ${this.power};\nРежим уборки: ${this.cleaningMode}`);
-    }
+  this.getInfo = function () {
+    console.log(`Мощность: ${this.power};\nРежим уборки: ${this.cleaningMode}`);
+  };
 }
 
-class RobotCleaner extends VacuumCleaner {
-    map = false;
+function RobotCleaner(map, ...args) {
+  VacuumCleaner.apply(this, [...args]);
+  this.map = map;
 
-    constructor(map, power, isOn, cleaningMode) {
-      super(power, isOn, cleaningMode);
-      this.map = map;
-    }
+  this.scan = function () {
+    this.map = true;
+    return this;
+  };
 
-    scan() {
-      this.map = true;
-      return this;
-    }
-
-    getInfo() {
-      super.getInfo();
-      console.log(`Карта: ${this.map}`);
-    }
+  const parentsGetInfo = this.getInfo;
+  this.getInfo = function () {
+    parentsGetInfo.call(this);
+    console.log(`Карта: ${this.map}`);
+  };
 }
 
-class RobotSoldier extends RobotCleaner {
-  constructor(isFire, map, power, isOn, cleaningMode) {
-    super(map, power, isOn, cleaningMode);
-    this.isFire = isFire;
-  }
+function RobotSoldier(isFire, ...args) {
+  RobotCleaner.apply(this, [...args]);
+  this.isFire = isFire;
 
-  setFireOn() {
+  this.setFireOn = function () {
     this.isFire = true;
     return this;
-  }
+  };
 
-  setFireOff() {
+  this.setFireOff = function () {
     this.isFire = false;
     return this;
-  }
+  };
 
-  statusOfFire() {
+  this.statusOfFire = function () {
     return this.isFire;
-  }
+  };
 
-  getInfo() {
-    super.getInfo();
+  const parentsGetInfo = this.getInfo;
+  this.getInfo = function () {
+    parentsGetInfo.call(this);
     console.log(`Стреляет: ${this.isFire}`);
-  }
+  };
 }
-
-const a = new VacuumCleaner(800, false, 'water');
-a.setOf();
-console.log(a);
-a.setOn();
-console.log(a);
-a.getInfo();
-
-const b = new RobotCleaner('map', 1500, true, 'dry');
-console.log(b);
-
-b.getInfo();
-
-const c = new RobotSoldier(false, false, 2000, false, 'water');
-
-console.log(c);
-
-c.getInfo();
-c.statusOfFire();
