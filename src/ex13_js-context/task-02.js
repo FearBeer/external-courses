@@ -1,49 +1,67 @@
+// eslint-disable-next-line no-unused-vars
 class Hangman {
   constructor(word) {
     this.word = word;
     this.errors = 6;
     this.guessedString = '';
     this.wrongSymbols = [];
-    this.rightSymbols = [];
+    this.guessedArray = [];
   }
 
   guess(letter) {
-    if (this.guessedString.includes(letter) || this.word.includes(letter)) {
-      const regexp = new RegExp(`[^${letter}]`, 'g');
-      this.guessedString += letter;
-      this.rightSymbols.push(letter);
-      const newWord = this.word.replace(regexp, '_');
-      console.log(newWord);
-      return this;
+    const arrayFromWord = (this.word).toLowerCase().split('');
+
+    if (this.guessedArray.length === 0) {
+      for (let i = 0; i < (this.word).length; i++) {
+        this.guessedArray.push('_');
+      }
     }
-    this.errors--;
-    this.wrongSymbols.push(letter);
-    console.log(`wrong letter, errors left ${this.errors} | ${this.wrongSymbols}`);
+    for (let i = 0; i < (this.word).length; i++) {
+      if (arrayFromWord[i] === letter) {
+        this.guessedArray[i] = letter;
+      } else if (!this.word.includes(letter)) {
+        this.errors--;
+        this.wrongSymbols.push(letter);
+        console.log(`wrong letter, errors left ${this.errors} | ${this.wrongSymbols}`);
+        return this;
+      }
+    }
+
+    if ((this.guessedArray).join('') === this.word) {
+      console.log(`${(this.guessedArray).join('')} | You won!`);
+    } else {
+      console.log((this.guessedArray).join(''));
+    }
+
     return this;
   }
 
   getGuessedString() {
-    console.log(this.guessedString);
+    console.log((this.guessedArray).join(''));
     return this;
   }
 
   getErrorsLeft() {
     console.log(this.errors);
+    return this;
   }
 
   getWrongSymbols() {
     console.log(this.wrongSymbols);
+    return this;
   }
 
   getStatus() {
-    console.log(this.guessedString);
+    console.log(`${(this.guessedArray).join('')} | errors left ${this.errors}`);
+    return this;
+  }
+
+  startAgain(newWord) {
+    this.word = newWord;
+    this.errors = 6;
+    this.guessedString = '';
+    this.wrongSymbols = [];
+    this.guessedArray = [];
+    return this;
   }
 }
-
-const hangman = new Hangman('webpurple');
-
-hangman.guess('w'); // "w________"
-hangman.guess('e'); // "we______e"
-hangman.guess('a'); // "wrong letter, errors left 5 | a"
-hangman.guess('p'); // "we_p__p_e"
-hangman.guess('k'); // "wrong letter, errors left 4 | a,k"
